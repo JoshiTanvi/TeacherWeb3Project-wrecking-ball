@@ -18,8 +18,8 @@ class Ball{
         translate(this.body.position.x, this.body.position.y);
         rotate(this.body.angle);
         fill("red");
-        strokeWeight(4);
-        stroke("green");
+        strokeWeight(2);
+        stroke("white");
         circle(0, 0, 80);
         pop();
     }

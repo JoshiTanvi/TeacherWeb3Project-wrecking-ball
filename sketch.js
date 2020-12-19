@@ -37,7 +37,7 @@ function setup(){
 }
 
 function draw(){
-  background("blue");
+  background("teal");
   
   Matter.Engine.update(abEngine);
 
