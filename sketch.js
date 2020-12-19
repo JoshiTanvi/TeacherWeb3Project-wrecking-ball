@@ -29,13 +29,15 @@ function setup(){
   box17 = new Box(540, 200);
   box18 = new Box(540, 200);
 
-  b = new Ball(200, 300)
+  b = new Ball(300, 400);
+
+  chain = new Chain(b.body, {x: 300, y:100})
 
   
 }
 
 function draw(){
-  background("black");
+  background("blue");
   
   Matter.Engine.update(abEngine);
 
@@ -61,5 +63,10 @@ function draw(){
   box18.display();
 
   b.display();
+  chain.display();
  
+}
+
+function mouseDragged() {
+  Matter.Body.setPosition(b.body, { x: mouseX, y: mouseY });
 }

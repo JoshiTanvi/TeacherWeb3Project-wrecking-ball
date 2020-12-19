@@ -5,7 +5,7 @@ class Box{
         var b_options = {
             restitution: 0.6,
             friction: 1,
-            density :1
+            density :0.5
         }
 
         this.body = Matter.Bodies.rectangle(x, y, 70, 70, b_options);

@@ -3,9 +3,7 @@ class Ball{
     constructor(x, y){
 
         var b_options = {
-            restitution: 0.8,
-            friction: 0.4,
-            density :1
+            density :1.5
         }
 
         this.body = Matter.Bodies.circle(x, y, 40, b_options);
@@ -14,8 +12,8 @@ class Ball{
 
     display(){
 
-        this.body.position.x = mouseX;
-        this.body.position.y = mouseY;
+        //this.body.position.x = mouseX;
+        //this.body.position.y = mouseY;
         push();
         translate(this.body.position.x, this.body.position.y);
         rotate(this.body.angle);
