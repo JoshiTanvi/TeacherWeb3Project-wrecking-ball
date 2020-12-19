@@ -1,6 +1,6 @@
 class Box{
 
-    constructor(x, y, w, h){
+    constructor(x, y){
 
         var b_options = {
             restitution: 0.6,
@@ -8,9 +8,7 @@ class Box{
             density :1
         }
 
-        this.body = Matter.Bodies.rectangle(x, y, w, h, b_options);
-        this.width = w;
-        this.height = h;
+        this.body = Matter.Bodies.rectangle(x, y, 70, 70, b_options);
         Matter.World.add(abWorld, this.body);
     }
 
@@ -22,7 +20,7 @@ class Box{
         strokeWeight(4);
         stroke("green");
         rectMode(CENTER);
-        rect(0, 0, this.width, this.height);
+        rect(0, 0, 70, 70);
         pop();
     }
 

@@ -8,19 +8,21 @@ class Ball{
             density :1
         }
 
-        this.body = Matter.Bodies.circle(x, y, 20, b_options);
-        this.radius = 20;
-        Matter.Body.setAngle(this.body, a);
+        this.body = Matter.Bodies.circle(x, y, 40, b_options);
         Matter.World.add(abWorld, this.body);
     }
 
     display(){
 
+        this.body.position.x = mouseX;
+        this.body.position.y = mouseY;
         push();
+        translate(this.body.position.x, this.body.position.y);
+        rotate(this.body.angle);
+        fill("red");
         strokeWeight(4);
         stroke("green");
-        circleMode(RADIUS);
-        rect(this.body.position.x, this.body.position.x, this.radius);
+        circle(0, 0, 80);
         pop();
     }
 
